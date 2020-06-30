@@ -1,0 +1,28 @@
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.1.0
+    hooks:
+      - id: check-ast
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: fix-encoding-pragma
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+        fix: lf
+
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.5.1
+    hooks:
+      - id: python-check-blanket-noqa
+      - id: python-check-mock-methods
+      - id: python-no-eval
+      - id: python-no-log-warn
+      - id: python-use-type-annotations
+      - id: rst-backticks
+
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.6.2
+    hooks:
+      - id: pyupgrade
+"""

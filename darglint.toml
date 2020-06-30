@@ -1,0 +1,3 @@
+["setup.cfg".darglint]
+docstring_style = "google"
+strictness = "long"

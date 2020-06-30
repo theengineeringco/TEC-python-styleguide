@@ -1,0 +1,15 @@
+[nitpick]
+minimum_version = "0.22.0"
+
+[nitpick.styles]
+include = [
+  "file-structure.toml",
+  "poetry.toml",
+  "flake8.toml",
+  "black.toml",
+  "mypy.toml",
+  "isort.toml",
+  "pre-commit.toml",
+  "unimport.toml",
+  "darglint.toml",
+]

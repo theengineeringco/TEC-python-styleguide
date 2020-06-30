@@ -1,0 +1,14 @@
+[nitpick.files.absent]
+"requirements.txt" = "Install poetry, run 'poetry init' to create pyproject.toml, and move dependencies to it"
+"Pipfile" = "Use pyproject.toml instead"
+"Pipfile.lock" = "Use pyproject.toml instead"
+".isort.cfg" = "Move values to setup.cfg, section [isort]"
+".flake8" = "Move values to setup.cfg, section [flake8]"
+"mypy.ini" = "Move values to setup.cfg, section [mypy]"
+
+[nitpick.files.present]
+".editorconfig" = "The project must have an .editorconfig"
+"CHANGELOG.md" = "The project must have `CHANGELOG.md`"
+"README.md" = "The project must have `README.md`"
+".gitignore" = "The project must have `.gitignore` file"
+".pre-commit-config.yaml" = "Create the file with the contents below, then run 'pre-commit install'"
