@@ -11,7 +11,6 @@ repos:
       - id: check-ast
       - id: debug-statements
       - id: end-of-file-fixer
-      - id: fix-encoding-pragma
       - id: trailing-whitespace
 
   - repo: https://github.com/pre-commit/pygrep-hooks
@@ -41,7 +40,7 @@ repos:
       - id: seed-isort-config
 
   - repo: https://github.com/timothycrosley/isort
-    rev: 4.3.21
+    rev: "4.3.21"
     hooks:
       - id: isort
         additional_dependencies: [toml]
@@ -55,3 +54,8 @@ repos:
     rev: v1.7.0
     hooks:
       - id: blacken-docs
+
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v2.0.1
+    hooks:
+      - id: add-trailing-comma
