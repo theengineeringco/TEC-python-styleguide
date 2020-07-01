@@ -8,8 +8,6 @@ yaml = """
       - id: end-of-file-fixer
       - id: fix-encoding-pragma
       - id: trailing-whitespace
-      - id: mixed-line-ending
-        fix: lf
 
   - repo: https://github.com/pre-commit/pygrep-hooks
     rev: v1.5.1

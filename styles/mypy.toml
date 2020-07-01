@@ -7,14 +7,3 @@ warn_no_return = true
 warn_unused_configs = true
 warn_redundant_casts = true
 warn_unused_ignores = true
-# Comment out below and use package name
-# [mypy-`package_name`.*]
-# disallow_untyped_calls = true
-# disallow_untyped_defs = true
-# disallow_incomplete_defs = true
-# check_untyped_defs = true
-# warn_return_any = true
-# warn_unreachable = true
-# strict_equality = true
-# implicit_reexport = false
-# local_partial_types = true

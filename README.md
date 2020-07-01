@@ -2,15 +2,25 @@
 
 This repo sets out the style guide for all TEC repositories
 
-Examples of what your files should look like can be found in the `templates`
-folder.
+## Templates
+
+Examples of what your project config files should look like can be found in the
+`templates` folder.
+
+| The templates should be used wherever possible due to useful defaults that are not enforced by nitpick
 
 - N.B. If copying the templates, be sure to do a project wide replace of
   `<package_name>` with your package_name.
 
-To to ensure you conform to the styleguide and are up to date with the latest version run:
+## Nitpick
 
-`poetry add nitpick="^0.21.0" toml="<0.10.1"`
+Nitpick is used to ensure you conform to the latest style guide.
+
+To get set up with Nitpick, run:
+
+```bash
+poetry add nitpick="^0.21.0" toml="<0.10.1"
+```
 
 In your `pyproject.toml` add:
 
@@ -19,8 +29,7 @@ In your `pyproject.toml` add:
 style = "https://raw.githubusercontent.com/theengineeringco/python-styleguide/master/TEC-style.toml"
 ```
 
-Add in your `.pre-commit-config.yaml`, as teh first repo under the repos tag,
-add.
+Add in your `.pre-commit-config.yaml`, as teh first repo under the repos key, add.
 
 ```yaml
 - repo: https://github.com/andreoliwa/nitpick
@@ -32,4 +41,6 @@ add.
 
 Don't forget to install your pre-commit hooks using:
 
-`pre-commit install`
+```bash
+pre-commit install
+```
