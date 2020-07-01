@@ -9,6 +9,7 @@ max-line-length = 120
 max-local-variables = 10
 max-methods = 10
 max-module-members = 15
+
 # Violations:
 # https://wemake-python-stylegui.de/en/latest/pages/usage/violations/index.html
 # # Global Ignores - Ignore violations in ALL files
@@ -29,6 +30,7 @@ max-module-members = 15
 #   WPS428          # Ignore Statments with no effect Warnings
 #   WPS412          # Ignore Logic in __init__ File.
 # """
+
 # # File Ignores - Ignore violations in specific files. Inherits from extend-ignores
 # per-file-ignores = """
 #   **/__init__.py: F401
@@ -39,6 +41,7 @@ max-module-members = 15
 #   # WPS202    Ignore Too Many Module Members Warnings
 #   # WPS432    Ignore Magic Numbers Warnings
 # """
+
 # # Files/Folders to ignore
 # exclude = """
 #   scratch.py # scratch file

@@ -17,5 +17,5 @@ yaml = """
     rev: 4.3.21
     hooks:
         - id: isort
-        additional_dependencies: [toml]
+          additional_dependencies: [toml]
 """

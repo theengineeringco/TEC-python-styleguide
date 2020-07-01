@@ -8,6 +8,6 @@ yaml = """
     rev: v0.2.7
     hooks:
     - id: unimport
-        additional_dependencies: [toml]
-        args: [-c, pyproject.toml, -r, --include-star-import]
+      additional_dependencies: [toml]
+      args: [-c, pyproject.toml, -r, --include-star-import]
 """
