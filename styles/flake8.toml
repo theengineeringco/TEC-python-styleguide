@@ -3,6 +3,7 @@ format = "default"
 max-line-length = 120
 
 max-complexity = 20
+max-cognitive-score = 20
 max-line-complexity = 20
 max-module-members = 15 
 max-methods = 15        
