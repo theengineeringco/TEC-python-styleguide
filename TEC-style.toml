@@ -14,12 +14,6 @@ include = [
   "styles/darglint.toml",
 ]
 
-[nitpick.files."setup.cfg"]
-comma_separated_values = [
-  "flake8.extend-ignore",
-  "flake8.exclude",
-]
-
 [["pre-commit-config.yaml".repos]]
 yaml = """
   - repo: https://github.com/andreoliwa/nitpick
