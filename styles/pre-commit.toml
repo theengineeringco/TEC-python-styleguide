@@ -17,7 +17,6 @@ yaml = """
       - id: python-no-eval
       - id: python-no-log-warn
       - id: python-use-type-annotations
-      - id: rst-backticks
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v2.6.2
