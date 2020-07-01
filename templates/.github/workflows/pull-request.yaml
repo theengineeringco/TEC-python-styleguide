@@ -42,6 +42,11 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
 
+      - name: Setup Git Credentials
+        uses: fusion-engineering/setup-git-credentials@v2
+        with:
+          credentials: https://TEC-DevBot:${{secrets.TEC_DEVBOT_ACCESS_TOKEN}}@github.com/
+
       - name: Run Tests
         run: |
           pip install --upgrade pip

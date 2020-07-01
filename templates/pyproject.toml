@@ -34,7 +34,7 @@ use_parentheses = true
 known_third_party = []
 
 ["pyproject.toml".tool.unimport]
-include = '^tests|<package_name>'
+include = '^<package_name>|^tests'
 exclude = '(__init__.py)'
 
 [build-system]

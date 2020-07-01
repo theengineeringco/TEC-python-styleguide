@@ -19,7 +19,7 @@ Nitpick is used to ensure you conform to the latest style guide.
 To get set up with Nitpick, run:
 
 ```bash
-poetry add nitpick="^0.21.0" toml="<0.10.1"
+poetry add --dev nitpick="^0.21.0" toml="<0.10.1"
 ```
 
 In your `pyproject.toml` add:
