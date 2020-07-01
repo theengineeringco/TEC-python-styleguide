@@ -8,14 +8,14 @@ known_third_party = []
 
 [["pre-commit-config.yaml".repos]]
 yaml = """
-    - repo: https://github.com/asottile/seed-isort-config
+  - repo: https://github.com/asottile/seed-isort-config
     rev: v2.2.0
     hooks:
-        - id: seed-isort-config
+      - id: seed-isort-config
 
-    - repo: https://github.com/timothycrosley/isort
+  - repo: https://github.com/timothycrosley/isort
     rev: 4.3.21
     hooks:
-        - id: isort
-          additional_dependencies: [toml]
+      - id: isort
+        additional_dependencies: [toml]
 """
