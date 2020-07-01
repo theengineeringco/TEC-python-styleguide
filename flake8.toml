@@ -1,53 +1,46 @@
 ["setup.cfg".flake8]
-
 # Base flake8 configuration:
 # https://flake8.pycqa.org/en/latest/user/configuration.html
 format = "default"
-max-line-length = 120
-max-complexity = 20
 max-arguments = 10
+max-complexity = 20
+max-line-complexity = 16
+max-line-length = 120
 max-local-variables = 10
 max-methods = 10
-max-line-complexity = 16
 max-module-members = 15
-
 # Violations:
 # https://wemake-python-stylegui.de/en/latest/pages/usage/violations/index.html
-
-# Global Ignores - Ignore violations in ALL files
-extend-ignore = """
-  D1              # Ignore Missing Docstring Warnings
-  RST             # Ignore RST Docstring Warnings
-  Q000            # Allow using "" instead '' in line with black
-  E800            # Ignore Commented Out Code Warnings
-  EXE002          # Ignore No Shebang Warnings
-  C101            # Ignore No Magic Comment Warnings
-  WPS100          # Ignore Wrong Module Name (e.g. helpers) Warnings 
-  WPS110          # Ignore Wrong Variable Name (e.g. data, value) Warnings
-  WPS300          # Ignore Local Folder Import Warnings
-  WPS331          # Ignore Variable Only Used in return Warning - Particulary important for mypy typing
-  WPS410          # Ignore Found Wrong Metadata Variable (e.g. __all__ warning)
-  WPS420          # Ignore Wrong Keyword (e.g. pass) Warnings
-  WPS421          # Ignore Wrong Function Call (e.g. print) Warnings
-  WPS428          # Ignore Statments with no effect Warnings
-  WPS412          # Ignore Logic in __init__ File.
-"""
-
-# File Ignores - Ignore violations in specific files. Inherits from extend-ignores
-per-file-ignores = """
-
-  **/__init__.py: F401
-  # F401      Ingore Module Imported but unused
-
-  tests/*.py: S101, WPS202, WPS226, WPS432
-  # S101      Ignore Assert Warnings
-  # WPS226    Ingore String Overuse Warnings
-  # WPS202    Ignore Too Many Module Members Warnings
-  # WPS432    Ignore Magic Numbers Warnings 
-"""
-
-# Files/Folders to ignore
-exclude = """
-  scratch.py # scratch file
-  .venv, .git, __pycache__, .mypy_cache, .pytest_cache, .tox
-  """
+# # Global Ignores - Ignore violations in ALL files
+# extend-ignore = """
+#   D1              # Ignore Missing Docstring Warnings
+#   RST             # Ignore RST Docstring Warnings
+#   Q000            # Allow using "" instead '' in line with black
+#   E800            # Ignore Commented Out Code Warnings
+#   EXE002          # Ignore No Shebang Warnings
+#   C101            # Ignore No Magic Comment Warnings
+#   WPS100          # Ignore Wrong Module Name (e.g. helpers) Warnings
+#   WPS110          # Ignore Wrong Variable Name (e.g. data, value) Warnings
+#   WPS300          # Ignore Local Folder Import Warnings
+#   WPS331          # Ignore Variable Only Used in return Warning - Particulary important for mypy typing
+#   WPS410          # Ignore Found Wrong Metadata Variable (e.g. __all__ warning)
+#   WPS420          # Ignore Wrong Keyword (e.g. pass) Warnings
+#   WPS421          # Ignore Wrong Function Call (e.g. print) Warnings
+#   WPS428          # Ignore Statments with no effect Warnings
+#   WPS412          # Ignore Logic in __init__ File.
+# """
+# # File Ignores - Ignore violations in specific files. Inherits from extend-ignores
+# per-file-ignores = """
+#   **/__init__.py: F401
+#   # F401      Ingore Module Imported but unused
+#   tests/*.py: S101, WPS202, WPS226, WPS432
+#   # S101      Ignore Assert Warnings
+#   # WPS226    Ingore String Overuse Warnings
+#   # WPS202    Ignore Too Many Module Members Warnings
+#   # WPS432    Ignore Magic Numbers Warnings
+# """
+# # Files/Folders to ignore
+# exclude = """
+#   scratch.py # scratch file
+#   .venv, .git, __pycache__, .mypy_cache, .pytest_cache, .tox
+#   """

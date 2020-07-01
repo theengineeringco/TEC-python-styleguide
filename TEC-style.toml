@@ -13,3 +13,10 @@ include = [
   "unimport.toml",
   "darglint.toml",
 ]
+
+[nitpick.files."setup.cfg"]
+comma_separated_values = [
+  "flake8.extend-ignore",
+  "flake8.per-file-ignore",
+  "flake8.exclude"
+]
