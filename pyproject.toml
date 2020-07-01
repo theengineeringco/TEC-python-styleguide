@@ -8,14 +8,16 @@ authors = ["Arran Hobson Sayers <ahobsonsayers@gmail.com>"]
 python = "^3.6"
 nitpick = "^0.21.0"
 toml = "<0.10.1"
-# Pre-commit - helps enforce code style. Use `pre-commit install` to install
-pre-commit = { version = "^2.5.0", python = "^3.6.1" }
 flake8 = "^3.8"
 taskipy = "^1.2"
 
+# Pre-commit - helps enforce code style. Use `pre-commit install` to install
+pre-commit = { version = "^2.5.0", python = "^3.6.1" }
+
 [tool.taskipy.tasks]
-# Run with: poetry run task check_templates
-check_templates = "cd templates && flake8 . && cd .."
+# Run with: 
+#   poetry run task check_templates
+check_templates = "cd templates && flake8 --select=NIP && cd .."
 
 [tool.nitpick]
 style = "../TEC-style.toml"

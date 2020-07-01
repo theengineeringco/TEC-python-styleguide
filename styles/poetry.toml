@@ -2,16 +2,16 @@
 python = "^3.6"
 
 ["pyproject.toml".tool.poetry.dev-dependencies]
-wemake-python-styleguide = "^0.14.0"
+wemake-python-styleguide = "^0.14"
 mypy = "^0.770"
 black = "^19.10b0"
-isort = '{ version = "^4.3.0", extras = ["pyproject"] }'
-pytest = "^5.4.0"
-tox = "^3.15.2"
-tox-pyenv = "^1.1.0"
+isort = '{ version = "^4.3", extras = ["pyproject"] }'
+pytest = "^5.4"
+tox = "^3.15"
+tox-pyenv = "^1.1"
 nitpick = "^0.21"
 toml = "<0.10.1"
-pre-commit = '{ version = "^2.5.0", python = "^3.6.1" }'
+pre-commit = '{ version = "^2.5", python = "^3.6.1" }'
 
 ["pyproject.toml".build-system]
 requires = ["poetry>=1.0", "pip>=20.0"]

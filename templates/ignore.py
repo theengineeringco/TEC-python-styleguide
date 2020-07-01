@@ -1,1 +1,1 @@
-# Ignore this file
+print("Ignore this file")
