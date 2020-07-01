@@ -1,0 +1,20 @@
+{
+  "platformSettings.autoLoad": true,
+  "platformSettings.platforms": {
+    "win32": {
+      "nodes": {
+        "python.pythonPath": ".venv\\Scripts\\python.exe"
+      }
+    },
+    "linux": {
+      "nodes": {
+        "python.pythonPath": ".venv/bin/python"
+      }
+    }
+  },
+
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": false,
+  "python.linting.mypyEnabled": false,
+  "python.testing.pytestEnabled": false
+}

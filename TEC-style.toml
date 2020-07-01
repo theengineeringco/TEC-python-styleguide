@@ -1,17 +1,17 @@
 [nitpick]
-minimum_version = "0.22.0"
+minimum_version = "0.10"
 
 [nitpick.styles]
 include = [
-  "file-structure.toml",
-  "poetry.toml",
-  "flake8.toml",
-  "black.toml",
-  "mypy.toml",
-  "isort.toml",
-  "pre-commit.toml",
-  "unimport.toml",
-  "darglint.toml",
+  "styles/file-structure.toml",
+  "styles/poetry.toml",
+  "styles/flake8.toml",
+  "styles/black.toml",
+  "styles/mypy.toml",
+  "styles/isort.toml",
+  "styles/pre-commit.toml",
+  "styles/unimport.toml",
+  "styles/darglint.toml",
 ]
 
 [nitpick.files."setup.cfg"]
@@ -20,3 +20,12 @@ comma_separated_values = [
   "flake8.per-file-ignore",
   "flake8.exclude"
 ]
+
+[["pre-commit-config.yaml".repos]]
+yaml = """
+  - repo: https://github.com/andreoliwa/nitpick
+    rev: v0.21.4
+    hooks:
+      - id: nitpick
+        additional_dependencies: ["toml==0.10.0"]
+"""

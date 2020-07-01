@@ -1,0 +1,39 @@
+# Other Poetry Sections
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+wemake-python-styleguide = "^0.14.0" # Linting
+mypy = "^0.770" # Linting
+black = "^19.10b0" # Formatting
+isort = { version = "^4.3.0", extras = ["pyproject"] } # Formatting
+pytest = "^5.4.0" # Runnning Tests
+tox = "^3.15.2" # Tox Testing
+tox-pyenv = "^1.1.0" # Tox Testing
+nitpick = "^0.21" # Style Guide
+toml = "<0.10.1" # Style Guide
+# Pre-commit - helps enforce code style. Use `pre-commit install` to install
+pre-commit = { version = "^2.5.0", python = "^3.6.1" }
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/theengineeringco/python-styleguide/master/TEC-style.toml"
+
+[tool.black]
+line-length = 120
+target-version = ["py36"]
+
+[tool.isort]
+line_length = 120
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+known_third_party = []
+
+["pyproject.toml".tool.unimport]
+include = '^tests|<package_name>'
+exclude = '(__init__.py)'
+
+[build-system]
+requires = ["poetry>=1.0", "pip>=20.0"]
+build-backend = "poetry.masonry.api"

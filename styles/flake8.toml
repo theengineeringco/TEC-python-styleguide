@@ -1,6 +1,4 @@
 ["setup.cfg".flake8]
-# Base flake8 configuration:
-# https://flake8.pycqa.org/en/latest/user/configuration.html
 format = "default"
 max-arguments = 10
 max-complexity = 20
@@ -10,9 +8,6 @@ max-local-variables = 10
 max-methods = 10
 max-module-members = 15
 
-# Violations:
-# https://wemake-python-stylegui.de/en/latest/pages/usage/violations/index.html
-# # Global Ignores - Ignore violations in ALL files
 # extend-ignore = """
 #   D1              # Ignore Missing Docstring Warnings
 #   RST             # Ignore RST Docstring Warnings
@@ -31,7 +26,6 @@ max-module-members = 15
 #   WPS412          # Ignore Logic in __init__ File.
 # """
 
-# # File Ignores - Ignore violations in specific files. Inherits from extend-ignores
 # per-file-ignores = """
 #   **/__init__.py: F401
 #   # F401      Ingore Module Imported but unused
@@ -42,8 +36,7 @@ max-module-members = 15
 #   # WPS432    Ignore Magic Numbers Warnings
 # """
 
-# # Files/Folders to ignore
 # exclude = """
-#   scratch.py # scratch file
+#   scratch.py
 #   .venv, .git, __pycache__, .mypy_cache, .pytest_cache, .tox
 #   """

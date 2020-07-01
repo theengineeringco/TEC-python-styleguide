@@ -1,6 +1,6 @@
 ["pyproject.toml".tool.unimport]
-exclude = '(__init__.py)'
-include = '^tests'
+exclude = "'(__init__.py)'*"
+include = "'^tests'*"
 
 [["pre-commit-config.yaml".repos]]
 yaml = """

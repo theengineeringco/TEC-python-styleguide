@@ -3,8 +3,17 @@ line_length = 120
 multi_line_output = 3
 include_trailing_comma = true
 force_grid_wrap = 0
+disallow_untyped_calls = true
+# disallow_untyped_defs = true
+# disallow_incomplete_defs = true
+# check_untyped_defs = true
+# warn_return_any = true
+# warn_unreachable = true
+# strict_equality = true
+# implicit_reexport = false
+# local_partial_types = true
 use_parentheses = true
-known_third_party = []
+known_third_party = "*"
 
 [["pre-commit-config.yaml".repos]]
 yaml = """
