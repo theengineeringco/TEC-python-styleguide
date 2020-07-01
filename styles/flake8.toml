@@ -1,11 +1,14 @@
 ["setup.cfg".flake8]
 format = "default"
-max-arguments = 10
-max-complexity = 20
-max-line-complexity = 16
 max-line-length = 120
+
+max-complexity = 20
+max-line-complexity = 20
+max-module-members = 15 
+max-methods = 15        
+max-arguments = 10      
 max-local-variables = 10
-max-methods = 10
-max-module-members = 15
 
 extend-ignore = "D1, RST, Q000, E800, EXE002, C101, WPS100, WPS110, WPS300, WPS305, WPS331, WPS410, WPS412, WPS420, WPS421, WPS428"
+
+exclude = "scratch.py, .venv, .git, __pycache__, .mypy_cache, .pytest_cache, .tox"
