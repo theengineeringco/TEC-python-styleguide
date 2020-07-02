@@ -1,6 +1,6 @@
 ## Based on https://github.com/github/gitignore/blob/master/Python.gitignore
 
-# Ingore scratch file
+# Ignore scratch file
 scratch.py
 
 # Ignore Poetry Lock
