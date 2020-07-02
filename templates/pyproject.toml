@@ -33,7 +33,7 @@ force_grid_wrap = 0
 use_parentheses = true
 known_third_party = []
 
-["pyproject.toml".tool.unimport]
+[tool.unimport]
 include = '^<package_name>|^tests'
 exclude = '(__init__.py)'
 

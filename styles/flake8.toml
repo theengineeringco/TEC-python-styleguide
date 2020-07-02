@@ -3,13 +3,15 @@ format = "default"
 max-line-length = 120
 
 max-complexity = 20
+max-cognitive-score = 20
 max-line-complexity = 20
 max-module-members = 15 
 max-methods = 15        
 max-arguments = 10      
 max-local-variables = 10
 max-string-usages = 5
+max-awaits = 10
 
-extend-ignore = "D1, RST, Q000, E800, EXE002, C101, WPS100, WPS110, WPS300, WPS305, WPS306, WPS331, WPS410, WPS412, WPS420, WPS421, WPS428"
+extend-ignore = "C101, D1, E800, EXE002, Q000, RST, W503, WPS100, WPS110, WPS300, WPS305, WPS306, WPS331, WPS410, WPS412, WPS420, WPS421, WPS428"
 
 exclude = "scratch.py, .venv, .git, __pycache__, .mypy_cache, .pytest_cache, .tox"
