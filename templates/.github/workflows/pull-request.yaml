@@ -24,7 +24,7 @@ jobs:
 
       - name: Run Linting
         run: |
-          pip install tox
+          pip install poetry tox
           tox -e lint
 
   Testing:
@@ -53,5 +53,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          pip install tox tox-gh-actions
+          pip install poetry tox tox-gh-actions
           tox

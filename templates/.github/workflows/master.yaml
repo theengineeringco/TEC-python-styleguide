@@ -33,5 +33,5 @@ jobs:
 
       - name: Run Tests
         run: |
-          pip install tox tox-gh-actions
+          pip install poetry tox tox-gh-actions
           tox
