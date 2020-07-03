@@ -1,0 +1,42 @@
+name: Test Style Guide
+
+# Trigger the workflow on pull request to master branch
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+
+      - name: Set up Poetry
+        uses: Gr1N/setup-poetry@v2
+
+      - name: Use Cache
+        uses: actions/cache@v2
+        with:
+          path: .tox
+          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-poetry-
+
+      - name: Setup Testing
+        run: |
+          poetry config virtualenvs.create false
+          poetry install
+
+      - name: Run Testing
+        run: task check_templates
