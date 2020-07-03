@@ -39,4 +39,4 @@ jobs:
           poetry install
 
       - name: Run Testing
-        run: poetry run task check_templates
+        run: task check_templates
