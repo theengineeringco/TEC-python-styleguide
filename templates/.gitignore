@@ -3,9 +3,6 @@
 # Ignore scratch file
 scratch.py
 
-# Ignore Poetry Lock
-poetry.lock
-
 # Ignore setup.py, it is generate by poetry
 setup.py
 
