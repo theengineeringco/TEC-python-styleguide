@@ -25,14 +25,6 @@ jobs:
       - name: Set up Poetry
         uses: Gr1N/setup-poetry@v2
 
-      - name: Use Cache
-        uses: actions/cache@v2
-        with:
-          path: .tox
-          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-poetry-
-
       - name: Setup Testing
         run: |
           poetry config virtualenvs.create false

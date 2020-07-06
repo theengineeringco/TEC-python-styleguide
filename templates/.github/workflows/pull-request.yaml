@@ -34,14 +34,6 @@ jobs:
         env:
           POETRY_VIRTUALENVS_CREATE: false
 
-      - name: Use Cache
-        uses: actions/cache@v2
-        with:
-          path: .tox
-          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-poetry-
-
       - name: Setup Linting
         run: pip install tox
 
@@ -81,14 +73,6 @@ jobs:
         run: poetry lock -v
         env:
           POETRY_VIRTUALENVS_CREATE: false
-
-      - name: Use Cache
-        uses: actions/cache@v2
-        with:
-          path: .tox
-          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-poetry-
 
       - name: Setup Testing
         run: pip install tox tox-gh-actions
