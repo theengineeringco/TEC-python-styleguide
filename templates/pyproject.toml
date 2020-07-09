@@ -1,7 +1,7 @@
 # Other Poetry Sections
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.14"                    # Linting
@@ -15,7 +15,7 @@ nitpick = "^0.21"                                     # Style Guide
 toml = "<0.10.1"                                      # Style Guide
 
 # Pre-commit - helps enforce code style. Use `pre-commit install` to install
-pre-commit = { version = "^2.5", python = "^3.6.1" }
+pre-commit = "^2.5"
 
 [tool.nitpick]
 style = "https://raw.githubusercontent.com/theengineeringco/python-styleguide/master/TEC-style.toml"
