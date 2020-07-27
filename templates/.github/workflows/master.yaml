@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
 
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 6
+    timeout-minutes: 8
 
     steps:
       - name: Clone Repo
