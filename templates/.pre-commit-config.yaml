@@ -1,4 +1,10 @@
 repos:
+  - repo: https://github.com/commitizen-tools/commitizen
+  rev: master
+  hooks:
+    - id: commitizen
+      stages: [commit-msg]
+
   - repo: https://github.com/andreoliwa/nitpick
     rev: v0.21.4
     hooks:

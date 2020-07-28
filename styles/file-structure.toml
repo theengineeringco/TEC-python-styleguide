@@ -19,5 +19,5 @@
 ".gitignore" = "The project must have `.gitignore` file. See the style guide for the default."
 
 ".pre-commit-config.yaml" = "Create the file with the contents below, then run 'pre-commit install'"
-".github/workflows/master.yaml" = "Add a Github Actions workflow for pushes to master called `master.yaml`. See the style guide for the default."
+".github/workflows/push.yaml" = "Add a Github Actions workflow for pushes to master called `master.yaml`. See the style guide for the default."
 ".github/workflows/pull-request.yaml" = "Add a Github Actions workflow for pull requests to master called `pull-request.yaml`. See the style guide for the default."
