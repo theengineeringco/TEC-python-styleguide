@@ -1,29 +1,25 @@
 name: Pull Request
 
-# Trigger the workflow on pull request to master branch
+# Trigger the workflow on pull request to either master or develop branch
 on:
   pull_request:
     branches:
       - master
+      - develop
 
 jobs:
-  Linting:
+  linting:
+    name: Linting
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 10
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
 
     steps:
       - name: Clone Repo
         uses: actions/checkout@v2
 
-      - name: Setup Git Credentials
-        uses: fusion-engineering/setup-git-credentials@v2
-        with:
-          credentials: https://TEC-DevBot:${{secrets.TEC_DEVBOT_ACCESS_TOKEN}}@github.com/
-
       - name: Set up Python
         uses: actions/setup-python@v2
-        with:
-          python-version: 3.6
 
       - name: Set up Poetry
         uses: Gr1N/setup-poetry@v2
@@ -40,30 +36,25 @@ jobs:
       - name: Run Linting
         run: tox -e lint
 
-  Testing:
+  testing:
+    name: Testing
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+
     strategy:
-      matrix:
-        os: [ubuntu-latest]
-        python: [3.6, 3.7, 3.8]
-
       fail-fast: false
-
-    runs-on: ${{ matrix.os }}
-    timeout-minutes: 8
+      matrix:
+        python: [3.6, 3.7, 3.8]
 
     steps:
       - name: Clone Repo
         uses: actions/checkout@v2
 
-      - name: Setup Git Credentials
-        uses: fusion-engineering/setup-git-credentials@v2
-        with:
-          credentials: https://TEC-DevBot:${{secrets.TEC_DEVBOT_ACCESS_TOKEN}}@github.com/
-
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: ${{ matrix.python }}
 
       - name: Set up Poetry
         uses: Gr1N/setup-poetry@v2
