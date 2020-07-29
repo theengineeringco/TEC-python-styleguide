@@ -5,11 +5,6 @@ yaml = """
       - id: commitizen
         stages: [commit-msg]
 
-  - repo: https://github.com/andreoliwa/nitpick
-    hooks:
-      - id: nitpick
-        additional_dependencies: ["toml==0.10.0"]
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     hooks:
       - id: check-ast
@@ -18,7 +13,6 @@ yaml = """
       - id: trailing-whitespace
 
   - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.5.1
     hooks:
       - id: python-check-blanket-noqa
       - id: python-check-mock-methods
@@ -30,32 +24,4 @@ yaml = """
     hooks:
       - id: pyupgrade
         args: [--py36-plus]
-
-  - repo: https://github.com/hakancelik96/unimport
-    hooks:
-      - id: unimport
-        additional_dependencies: [toml]
-        args: [-c, pyproject.toml, -r, --include-star-import]
-
-  - repo: https://github.com/asottile/seed-isort-config
-    hooks:
-      - id: seed-isort-config
-
-  - repo: https://github.com/timothycrosley/isort
-    rev: "5.2.1"
-    hooks:
-      - id: isort
-        additional_dependencies: [toml]
-
-  - repo: https://github.com/python/black
-    hooks:
-      - id: black
-
-  - repo: https://github.com/asottile/blacken-docs
-    hooks:
-      - id: blacken-docs
-
-  - repo: https://github.com/asottile/add-trailing-comma
-    hooks:
-      - id: add-trailing-comma
 """

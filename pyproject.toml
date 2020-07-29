@@ -13,15 +13,10 @@ taskipy = "^1.2"
 
 [tool.taskipy.tasks]
 # Run with:
-#   poetry run task check_templates
+#   poetry run task check_templates 
 check_templates = """
-    mv pyproject.toml pyproject-hidden.toml && \
-    cd templates && \
-    sed -i 's|style = "https://raw.githubusercontent.com/theengineeringco/python-styleguide/master/TEC-style.toml"|style = "../TEC-style.toml"|g' pyproject.toml &&
-    flake8 --select=NIP ; \
-    sed -i 's|style = "../TEC-style.toml"|style = "https://raw.githubusercontent.com/theengineeringco/python-styleguide/master/TEC-style.toml"|g' pyproject.toml &&
-    cd .. && \
-    mv pyproject-hidden.toml pyproject.toml
+    chmod +x ./check_templates.sh &&
+    ./check_templates.sh
 """
 
 [build-system]
