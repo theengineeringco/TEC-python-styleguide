@@ -5,12 +5,10 @@ target-version = ["py36"]
 [["pre-commit-config.yaml".repos]]
 yaml = """
   - repo: https://github.com/python/black
-    rev: 19.10b0
     hooks:
       - id: black
 
   - repo: https://github.com/asottile/blacken-docs
-    rev: v1.7.0
     hooks:
       - id: blacken-docs
 """

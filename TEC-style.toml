@@ -22,7 +22,6 @@ comma_separated_values = [
 [["pre-commit-config.yaml".repos]]
 yaml = """
   - repo: https://github.com/andreoliwa/nitpick
-    rev: v0.21.4
     hooks:
       - id: nitpick
         additional_dependencies: ["toml==0.10.0"]

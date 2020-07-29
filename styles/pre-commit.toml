@@ -1,7 +1,11 @@
 [["pre-commit-config.yaml".repos]]
 yaml = """
+  - repo: https://github.com/commitizen-tools/commitizen
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.1.0
     hooks:
       - id: check-ast
       - id: debug-statements
@@ -9,7 +13,6 @@ yaml = """
       - id: trailing-whitespace
 
   - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.5.1
     hooks:
       - id: python-check-blanket-noqa
       - id: python-check-mock-methods
@@ -18,7 +21,6 @@ yaml = """
       - id: python-use-type-annotations
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.6.2
     hooks:
       - id: pyupgrade
         args: [--py36-plus]
