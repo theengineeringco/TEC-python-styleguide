@@ -1,5 +1,5 @@
 [["pre-commit-config.yaml".repos]]
-repos:
+"""repos:
   - repo: https://github.com/commitizen-tools/commitizen
     hooks:
       - id: commitizen
