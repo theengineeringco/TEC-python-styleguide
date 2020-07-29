@@ -1,7 +1,16 @@
 [["pre-commit-config.yaml".repos]]
-yaml = """
+repos:
+  - repo: https://github.com/commitizen-tools/commitizen
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+
+  - repo: https://github.com/andreoliwa/nitpick
+    hooks:
+      - id: nitpick
+        additional_dependencies: ["toml==0.10.0"]
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.1.0
     hooks:
       - id: check-ast
       - id: debug-statements
@@ -18,8 +27,35 @@ yaml = """
       - id: python-use-type-annotations
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.6.2
     hooks:
       - id: pyupgrade
         args: [--py36-plus]
+
+  - repo: https://github.com/hakancelik96/unimport
+    hooks:
+      - id: unimport
+        additional_dependencies: [toml]
+        args: [-c, pyproject.toml, -r, --include-star-import]
+
+  - repo: https://github.com/asottile/seed-isort-config
+    hooks:
+      - id: seed-isort-config
+
+  - repo: https://github.com/timothycrosley/isort
+    rev: "5.2.1"
+    hooks:
+      - id: isort
+        additional_dependencies: [toml]
+
+  - repo: https://github.com/python/black
+    hooks:
+      - id: black
+
+  - repo: https://github.com/asottile/blacken-docs
+    hooks:
+      - id: blacken-docs
+
+  - repo: https://github.com/asottile/add-trailing-comma
+    hooks:
+      - id: add-trailing-comma
 """
