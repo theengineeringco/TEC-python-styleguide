@@ -17,6 +17,10 @@ toml = "<0.10.1"                                      # Style Guide
 # Pre-commit - helps enforce code style. Use `pre-commit install` to install
 pre-commit = "^2.5"
 
+[[tool.poetry.source]]
+name = "flow-pypi"
+url = "http://flow-pypi.herokuapp.com/simple/"
+
 [tool.nitpick]
 style = "https://raw.githubusercontent.com/theengineeringco/python-styleguide/master/TEC-style.toml"
 
