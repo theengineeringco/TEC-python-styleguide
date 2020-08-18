@@ -5,7 +5,7 @@ description = ""
 authors = ["Arran Hobson Sayers <ahobsonsayers@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.8"
 nitpick = "^0.21.0"
 toml = "<0.10.1"
 flake8 = "^3.8"
