@@ -1,5 +1,5 @@
 ["setup.cfg".mypy]
-python_version = 3.6
+python_version = 3.8
 ignore_missing_imports = true
 follow_imports = "skip"
 strict_optional = true

@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.8
 
       - name: Get Full Python Version
         id: full-python-version
@@ -57,11 +57,6 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'skip ci')"
 
-    strategy:
-      fail-fast: false
-      matrix:
-        python: [3.6, 3.7, 3.8]
-
     steps:
       - name: Clone Repo
         uses: actions/checkout@v2
@@ -69,7 +64,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python }}
+          python-version: 3.8
 
       - name: Get Full Python Version
         id: full-python-version
