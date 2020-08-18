@@ -10,7 +10,6 @@ black = "^19.10b0"                                    # Formatting
 isort = { version = "^4.3", extras = ["pyproject"] }  # Formatting
 pytest = "^5.4"                                       # Runnning Tests
 tox = "^3.15"                                         # Tox Testing
-tox-pyenv = "^1.1"                                    # Tox Testing
 nitpick = "^0.21"                                     # Style Guide
 toml = "<0.10.1"                                      # Style Guide
 

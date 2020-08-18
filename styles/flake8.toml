@@ -12,6 +12,7 @@ max-arguments = 10
 max-local-variables = 10
 max-string-usages = 5
 max-imports = 15
+max-import-from-members = 10
 max-awaits = 10
 
 extend-ignore = "C101, D1, E800, EXE002, Q000, RST, W503, WPS100, WPS110, WPS300, WPS305, WPS306, WPS331, WPS410, WPS412, WPS420, WPS421, WPS428"
