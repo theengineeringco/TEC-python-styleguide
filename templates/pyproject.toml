@@ -1,7 +1,7 @@
 # Other Poetry Sections
 
 [tool.poetry.dependencies]
-python = "^3.6.1"
+python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.14"                    # Linting
@@ -10,7 +10,6 @@ black = "^19.10b0"                                    # Formatting
 isort = { version = "^4.3", extras = ["pyproject"] }  # Formatting
 pytest = "^5.4"                                       # Runnning Tests
 tox = "^3.15"                                         # Tox Testing
-tox-pyenv = "^1.1"                                    # Tox Testing
 nitpick = "^0.21"                                     # Style Guide
 toml = "<0.10.1"                                      # Style Guide
 
@@ -26,7 +25,7 @@ style = "https://raw.githubusercontent.com/theengineeringco/python-styleguide/ma
 
 [tool.black]
 line-length = 120
-target-version = ["py36"]
+target-version = ["py38"]
 
 [tool.isort]
 line_length = 120
