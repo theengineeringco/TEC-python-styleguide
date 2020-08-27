@@ -4,5 +4,5 @@ yaml = """
     hooks:
       - id: unimport
         additional_dependencies: [toml]
-        args: [-c, pyproject.toml, -r, --include-star-import]
+        args: [--config, pyproject.toml, --remove, --include-star-import]
 """
