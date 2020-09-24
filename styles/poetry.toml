@@ -15,5 +15,5 @@ name = "flow-pypi"
 url = "http://flow-pypi.herokuapp.com/simple/"
 
 ["pyproject.toml".build-system]
-equires = ["poetry>=1.0"]
+requires = ["poetry>=1.0"]
 build-backend = "poetry.masonry.api"
