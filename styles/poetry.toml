@@ -3,12 +3,12 @@ python = "^3.8"
 
 ["pyproject.toml".tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.14"
-mypy = "^0.770"
+mypy = "^0.780"
 black = "^20.8b1"
 isort = { version = "^4.3", extras = ["pyproject"] }
 pytest = "^6.0"
 tox = "^3.15"
-pre-commit = "^2.5"
+pre-commit = "^2.7"
 
 [["pyproject.toml".tool.poetry.source]]
 name = "flow-pypi"
