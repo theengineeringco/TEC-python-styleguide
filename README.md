@@ -16,13 +16,7 @@ Examples of what your project config files should look like can be found in the
 
 Nitpick is used to ensure you conform to the latest style guide.
 
-To get set up with Nitpick, run:
-
-```bash
-poetry add --dev nitpick="^0.21.0" toml="<0.10.1"
-```
-
-In your `pyproject.toml` add:
+To get set up with Nitpick, in your `pyproject.toml` add:
 
 ```toml
 [tool.nitpick]
@@ -33,14 +27,19 @@ Add in your `.pre-commit-config.yaml`, as teh first repo under the repos key, ad
 
 ```yaml
 - repo: https://github.com/andreoliwa/nitpick
-  rev: v0.21.4
+  rev: v0.23.0
   hooks:
     - id: nitpick
-      additional_dependencies: ["toml==0.10.0"]
 ```
 
 Don't forget to install your pre-commit hooks using:
 
 ```bash
 pre-commit install
+```
+
+Check your project conforms to the styleguide using:
+
+```bash
+pre-commit run --all
 ```

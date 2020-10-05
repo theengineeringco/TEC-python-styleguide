@@ -18,11 +18,3 @@ include = [
 comma_separated_values = [
   "flake8.exclude",
 ]
-
-[["pre-commit-config.yaml".repos]]
-yaml = """
-  - repo: https://github.com/andreoliwa/nitpick
-    hooks:
-      - id: nitpick
-        additional_dependencies: ["toml==0.10.0"]
-"""

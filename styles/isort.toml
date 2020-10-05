@@ -8,12 +8,7 @@ use_parentheses = true
 
 [["pre-commit-config.yaml".repos]]
 yaml = """
-  - repo: https://github.com/asottile/seed-isort-config
-    hooks:
-      - id: seed-isort-config
-
   - repo: https://github.com/timothycrosley/isort
     hooks:
       - id: isort
-        additional_dependencies: [toml]
 """

@@ -6,9 +6,9 @@ python = "^3.8"
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.14"                    # Linting
 mypy = "^0.770"                                       # Linting
-black = "^19.10b0"                                    # Formatting
+black = "^20.8b1"                                     # Formatting
 isort = { version = "^4.3", extras = ["pyproject"] }  # Formatting
-pytest = "^6.0"                                       # Runnning Tests
+pytest = "^6.0"                                       # Running Tests
 tox = "^3.15"                                         # Tox Testing
 
 # Pre-commit - helps enforce code style. Use `pre-commit install` to install
@@ -32,12 +32,11 @@ indent = 4
 include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
-known_third_party = []
 
 [tool.unimport]
 include = '^<package_name>|^tests'
 exclude = '(__init__.py)'
 
 [build-system]
-requires = ["poetry>=1.0"]
-build-backend = "poetry.masonry.api"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

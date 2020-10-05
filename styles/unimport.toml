@@ -3,6 +3,5 @@ yaml = """
   - repo: https://github.com/hakancelik96/unimport
     hooks:
       - id: unimport
-        additional_dependencies: [toml]
-        args: [--config, pyproject.toml, --remove, --include-star-import]
+        args: [--remove, --include-star-import]
 """

@@ -1,5 +1,9 @@
 [["pre-commit-config.yaml".repos]]
 yaml = """
+  - repo: https://github.com/andreoliwa/nitpick
+    hooks:
+      - id: nitpick
+
   - repo: https://github.com/commitizen-tools/commitizen
     hooks:
       - id: commitizen
@@ -24,4 +28,8 @@ yaml = """
     hooks:
       - id: pyupgrade
         args: [--py36-plus]
+  
+  - repo: https://github.com/asottile/add-trailing-comma
+    hooks:
+      - id: add-trailing-comma
 """
