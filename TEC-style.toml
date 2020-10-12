@@ -5,13 +5,14 @@ minimum_version = "0.10"
 include = [
   "styles/file-structure.toml",
   "styles/poetry.toml",
-  "styles/flake8.toml",
+  "styles/pytest.toml",
   "styles/black.toml",
-  "styles/mypy.toml",
   "styles/isort.toml",
-  "styles/pre-commit.toml",
   "styles/unimport.toml",
+  "styles/flake8.toml",
+  "styles/mypy.toml",
   "styles/darglint.toml",
+  "styles/pre-commit.toml",
 ]
 
 [nitpick.files."setup.cfg"]

@@ -21,6 +21,11 @@ url = "http://flow-pypi.herokuapp.com/simple/"
 [tool.nitpick]
 style = "https://raw.githubusercontent.com/theengineeringco/python-styleguide/master/TEC-style.toml"
 
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
 [tool.black]
 line-length = 120
 target-version = ["py38"]
