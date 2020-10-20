@@ -12,6 +12,7 @@ jobs:
   testing:
     name: Testing
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
     if: "!contains(github.event.head_commit.message, 'skip ci')"
 
     strategy:
@@ -51,7 +52,6 @@ jobs:
           && echo 'poetry.lock is up to date.' || (echo 'poetry.lock is out of date. Run "poetry lock" to fix.'; exit 1)
 
       - name: Install Dependencies
-        timeout-minutes: 10
         run: |
           poetry config cache-dir ~/.cache/poetry
           poetry config http-basic.flow-pypi flow-pypi ${{ secrets.FLOW_PYPI_PASSWORD }}
@@ -59,7 +59,6 @@ jobs:
           poetry install -vvv
 
       - name: Run Tests
-        timeout-minutes: 5
         shell: bash
         run: |
           poetry run pytest
@@ -68,6 +67,7 @@ jobs:
     name: Release
     needs: testing
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     if: "!contains(github.event.head_commit.message, 'skip ci')"
 
     steps:
@@ -89,7 +89,6 @@ jobs:
 
       - name: Release
         uses: cycjimmy/semantic-release-action@v2
-        timeout-minutes: 5
         with:
           extra_plugins: |
             @semantic-release/changelog
