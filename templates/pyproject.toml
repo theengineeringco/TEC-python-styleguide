@@ -15,8 +15,8 @@ tox = "^3.20"                                         # Tox Testing
 pre-commit = "^2.7"
 
 [[tool.poetry.source]]
-name = "flow-pypi"
-url = "http://flow-pypi.herokuapp.com/simple/"
+name = "tec-pypi"
+url = "https://pypi.theengineering.company"
 
 [tool.nitpick]
 style = "https://raw.githubusercontent.com/theengineeringco/python-styleguide/master/TEC-style.toml"
