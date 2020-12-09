@@ -1,9 +1,11 @@
 ["setup.cfg".mypy]
-python_version = 3.8
+python_version         = 3.8
 ignore_missing_imports = true
-follow_imports = "skip"
-strict_optional = true
-warn_no_return = true
-warn_unused_configs = true
-warn_redundant_casts = true
-warn_unused_ignores = true
+strict_optional        = true
+warn_redundant_casts   = true
+warn_unused_ignores    = true
+warn_no_return         = true
+warn_unreachable       = true
+check_untyped_defs     = true
+implicit_reexport      = false
+strict_equality        = true
