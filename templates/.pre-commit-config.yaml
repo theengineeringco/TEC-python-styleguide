@@ -42,7 +42,7 @@ repos:
     rev: 0.7.1
     hooks:
       - id: unimport
-        args: [--check, --include-star-import]
+        args: [--remove, --include-star-import]
 
   - repo: https://github.com/timothycrosley/isort
     rev: 5.7.0
