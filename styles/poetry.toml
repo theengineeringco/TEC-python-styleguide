@@ -16,5 +16,4 @@ name = "tec-pypi"
 url  = "https://pypi.theengineering.company"
 
 ["pyproject.toml".build-system]
-requires      = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
