@@ -8,7 +8,7 @@ python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 wemake-python-styleguide = "^0.15"                                       # Linting
-mypy                     = "^0.800"                                      # Linting
+mypy                     = "^0.812"                                      # Linting
 black                    = { version = "^21", allow-prereleases = true } # Formatting
 isort                    = "^5.0"                                        # Formatting
 unimport                 = "^0.8"                                        # Formatting
