@@ -7,14 +7,14 @@ description = "<description>"
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
-wemake-python-styleguide = "^0.15"                                       # Linting
-mypy                     = "^0.812"                                      # Linting
-black                    = { version = "^21", allow-prereleases = true } # Formatting
-isort                    = "^5.0"                                        # Formatting
-unimport                 = "^0.8"                                        # Formatting
-pytest                   = "^6.0"                                        # Tests
-tox                      = "^3.0"                                        # Tests
-pre-commit               = "^2.10"                                       # Code Style
+wemake-python-styleguide = "^0.15"  # Linting
+mypy                     = "^0.812" # Linting
+black                    = "^21b"   # Formatting
+isort                    = "^5.0"   # Formatting
+unimport                 = "^0.8"   # Formatting
+pytest                   = "^6.0"   # Tests
+tox                      = "^3.0"   # Tests
+pre-commit               = "^2.10"  # Code Style
 
 
 [[tool.poetry.source]]
