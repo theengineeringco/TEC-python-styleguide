@@ -1,17 +1,21 @@
-# Other Poetry Sections
+[tool.poetry]
+name        = "<package_name"
+version     = "<version>"
+description = "<description>"
 
 [tool.poetry.dependencies]
 python = "^3.8"
 
 [tool.poetry.dev-dependencies]
-wemake-python-styleguide = "^0.15"   # Linting
-mypy                     = "^0.780"  # Linting
-black                    = "^20.8b1" # Formatting
-isort                    = "^5.0"    # Formatting
-unimport                 = "^0.8"    # Formatting
-pytest                   = "^6.0"    # Tests
-tox                      = "^3.20"   # Tests
-pre-commit               = "^2.10"   # Code Style
+wemake-python-styleguide = "^0.15"                                       # Linting
+mypy                     = "^0.800"                                      # Linting
+black                    = { version = "^21", allow-prereleases = true } # Formatting
+isort                    = "^5.0"                                        # Formatting
+unimport                 = "^0.8"                                        # Formatting
+pytest                   = "^6.0"                                        # Tests
+tox                      = "^3.0"                                        # Tests
+pre-commit               = "^2.10"                                       # Code Style
+
 
 [[tool.poetry.source]]
 name = "tec-pypi"

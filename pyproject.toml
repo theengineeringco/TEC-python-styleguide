@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "python-styleguide"
-version = "0.1.0"
+name        = "python-styleguide"
+version     = "0.1.0"
 description = ""
-authors = ["Arran Hobson Sayers <ahobsonsayers@gmail.com>"]
+authors     = ["Arran Hobson Sayers <ahobsonsayers@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-nitpick = "^0.23"
-flake8 = "^3.8"
+python  = "^3.8"
+nitpick = "^0.20"
+flake8  = "^3.8"
 taskipy = "^1.2"
 
 [tool.taskipy.tasks]
@@ -19,5 +19,5 @@ check_templates = """
 """
 
 [build-system]
-requires = ["poetry-core"]
+requires      = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
