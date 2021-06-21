@@ -1,7 +1,8 @@
 [tool.poetry]
-name        = "<package_name"
-version     = "<version>"
-description = "<description>"
+name        = "--package_name--"
+version     = "--version--"
+description = "--description--"
+authors     = ["--name <email>--"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
